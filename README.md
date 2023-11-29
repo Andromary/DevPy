@@ -1,2 +1,2 @@
 # DevPy
-Here I will publish some of my Python projects
+Here I will push some of my Python projects
