@@ -1,5 +1,6 @@
 """Модуль содержит вспомогательные функции"""
 import os
+import pandas as pd
 import json
 from dotenv import load_dotenv, find_dotenv
 
@@ -16,3 +17,8 @@ def get_cities_list(file_name) -> list:
         cit = f.read()
         cities = json.loads(cit)
     return cities
+
+def read_gz(file_name: str):
+    """Чтение данных из архива"""
+    df = pd.read_csv(file_name, compression='gzip')
+    return df
